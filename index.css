@@ -1,0 +1,29 @@
+body {
+    background: black;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.link {
+    width: 170px;
+    font-size: 20px;
+    text-shadow: 1px 1px;
+    color: white;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 5px;
+    transition: .3s;
+}
+.link:hover {
+    cursor: pointer;
+    border-color: gray;
+    color: gray;
+    transform: rotate(360deg);
+}
+
+.link.rand-string-gen {
+    background: red;
+}
