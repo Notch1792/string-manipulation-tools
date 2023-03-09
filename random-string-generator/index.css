@@ -58,4 +58,16 @@ button.generate {
     width: calc(60vw + 6px);
     height: 46px;
     font-size: 20px;
+    background: limegreen;
+    transition: all ease-in-out .3s;
+}
+button.generate:hover {
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: lime;
+}
+button.generate:active {
+    transition: all ease-in-out .1s;
+    transform: rotate(360deg);
+    transition: all ease-in-out 0s;
 }
