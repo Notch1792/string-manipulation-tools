@@ -6,7 +6,7 @@ function generate() {
     let output = "";
     
     for(let i = 0; i < randomInt(min, max); i++) {
-        output+= String.fromCharCode(randomInt(0, 127));
+        output+= input[randomInt(0, input.length)];
     }
 
     document.getElementById("output").value = output;
