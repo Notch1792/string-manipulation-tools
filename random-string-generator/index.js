@@ -6,13 +6,13 @@ function generate() {
     let output = "";
     
     for(let i = 0; i < randomInt(min, max); i++) {
-        output+= input[1];
+        output+= input[randomInt(0, input.length - 1)];
     }
 
     document.getElementById("output").value = output;
 
 }
 
-function randomInt(min, max) {
-    return Math.random() * (max - min) + min;
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
