@@ -1,3 +1,16 @@
+function ascii() {
+
+    let output = "";
+
+    for(let i = 0; i < 128; i++)
+        output+= String.fromCharCode(i);
+
+    document.getElementById("output").value = output;
+}
+function asciiLimited() {
+
+}
+
 function generate() {
 
     let input = document.getElementById("input").value.split(document.getElementById("seperator").value);
@@ -14,7 +27,6 @@ function generate() {
     }
 
     document.getElementById("output").value = output;
-
 }
 
 function randomInt(min, max) {

@@ -2,6 +2,10 @@ body {
     background: black;
 }
 
+html {
+    overflow-y: hidden;
+}
+
 .home {
     position: absolute;
     width: 70px;
@@ -85,6 +89,17 @@ textarea.output {
     font-size: 20px;
 }
 
-html {
-    overflow-y: hidden;
+div.presets {
+    position: absolute;
+    right: 10px;
+}
+div.presets h1 {
+    color: white;
+}
+.preset.ascii {
+    position: absolute;
+    top: 100px;
+}
+.preset {
+    width: 115px;
 }
