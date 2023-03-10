@@ -9,7 +9,7 @@ function ascii() {
     document.getElementById("input").value = output;
 }
 function asciiLimited() {
-    document.getElementById("input").value = "";
+    document.getElementById("input").value = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 }
 
 function generate() {
@@ -17,7 +17,7 @@ function generate() {
     let input = document.getElementById("input").value.split(document.getElementById("seperator").value);
     let min = parseInt(document.getElementById("min").value);
     let max = parseInt(document.getElementById("max").value);
-    let output = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+    let output = "";
 
     if(min > max) {
         alert("Error: min > max");
