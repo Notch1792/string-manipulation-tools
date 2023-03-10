@@ -1,5 +1,9 @@
 function generate() {
     
+    if(min > max) {
+        alert("Error: min > max");
+    }
+
     let input = document.getElementById("input").value.split(document.getElementById("seperator").value);
     let min = document.getElementById("min").value;
     let max = document.getElementById("max").value;
