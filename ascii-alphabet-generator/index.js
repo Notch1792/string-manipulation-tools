@@ -37,7 +37,8 @@ function generate() {
 
             console.log(first);
 
-            output+= String.fromCharCode(first);
+            for(let i = first; i <= second; i++)
+                output+= String.fromCharCode(i);
 
         }
 
