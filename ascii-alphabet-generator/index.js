@@ -10,15 +10,20 @@ function generate() {
             let second = 0;
 
             for(let firstIndex = 1; firstIndex <= 3; firstIndex++) {
+
                 console.log(parseInt(input[x + firstIndex]));
-                if(input[x] != ',')
+
+                if(input[x] != ','){
+                    first*= 10;
                     first+= parseInt(input[x + firstIndex]);
-                else {
+                } else {
 
                     for(let secondIndex = 1; secondIndex <= 3; secondIndex++) {
 
-                        if(input[x] != '\\' || input[x] != '\\')
+                        if(input[x] != '\\' || input[x] != '\\'){
+                            second*= 10;
                             second+= parseInt(input[x + firstIndex]);
+                        }
 
                     }
 
