@@ -11,32 +11,19 @@ function generate() {
 
             for(let firstIndex = 1; firstIndex <= 3; firstIndex++) {
 
-                console.log(parseInt(input[x + firstIndex]));
+                if(input[x] != ',') {
 
-                if(input[x] != ','){
+                    console.log(parseInt(input[x + firstIndex]));
+
                     first*= 10;
                     first+= parseInt(input[x + firstIndex]);
-                } else {
-
-                    for(let secondIndex = 1; secondIndex <= 3; secondIndex++) {
-
-                        if(input[x] != '\\' || input[x] != '\\'){
-                            second*= 10;
-                            second+= parseInt(input[x + firstIndex]);
-                        }
-
-                    }
-
                 }
 
             }
 
             console.log(first);
-            console.log(second);
-            console.log(String.fromCharCode(first));
-            console.log(String.fromCharCode(second));
 
-            output+= String.fromCharCode(first) + String.fromCharCode(second);
+            output+= String.fromCharCode(first);
 
         }
 
