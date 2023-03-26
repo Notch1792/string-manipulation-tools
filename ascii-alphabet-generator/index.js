@@ -25,7 +25,7 @@ function generate() {
                             second*= 10;
                             second+= parseInt(input[x + secondIndex + firstIndex]);
 
-                        } else break;
+                        }
 
                     }
 
