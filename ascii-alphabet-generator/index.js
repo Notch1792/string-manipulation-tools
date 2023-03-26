@@ -41,7 +41,7 @@ function generate() {
                 output+= String.fromCharCode(i);
 
         } else if(input[x] == '/')
-            for(let i = charCodeAt(x + 1); i <= charCodeAt(x + 3); i++)
+            for(let i = input[x + 1].charCodeAt(); i <= input[x + 3].charCodeAt(); i++)
               output+= String.fromCharCode(i);
 
     console.log(output);
