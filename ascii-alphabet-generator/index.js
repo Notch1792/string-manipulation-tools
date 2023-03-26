@@ -11,7 +11,7 @@ function generate() {
 
             for(let firstIndex = 1; firstIndex <= 3; firstIndex++) {
 
-                if(input[x] != ',') {
+                if(input[x + firstIndex] != ',') {
 
                     console.log(parseInt(input[x + firstIndex]));
 
