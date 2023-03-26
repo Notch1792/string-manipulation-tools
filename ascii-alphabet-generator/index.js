@@ -29,6 +29,8 @@ function generate() {
 
                     }
 
+                    firstIndex = 3;
+
                 }
 
             }
