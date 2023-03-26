@@ -10,7 +10,7 @@ function generate() {
             let second = 0;
 
             for(let firstIndex = 1; firstIndex <= 3; firstIndex++) {
-
+                console.log(parseInt(input[x + firstIndex]));
                 if(input[x] != ',')
                     first+= parseInt(input[x + firstIndex]);
                 else {
@@ -26,9 +26,16 @@ function generate() {
 
             }
 
+            console.log(first);
+            console.log(second);
+            console.log(String.fromCharCode(first));
+            console.log(String.fromCharCode(second));
+
             output+= String.fromCharCode(first) + String.fromCharCode(second);
 
         }
+
+    console.log(output);
 
     document.getElementById("output").value = output;
 
