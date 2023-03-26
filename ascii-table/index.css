@@ -22,3 +22,23 @@ div.home {
 .home:hover {
     transform: scale(1.2);
 }
+
+table {
+    position: absolute;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: calc(100vw - 200px);
+    color: white;
+    background: rgb(76 76 76);
+    left: 100px;
+}
+
+td, th {
+    border: 1px solid rgb(221 221 221);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(117 117 117);
+}
