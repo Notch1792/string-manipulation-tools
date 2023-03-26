@@ -4,16 +4,31 @@ function generate() {
     let output = "";
 
     for(let x = 0; x < input.length; x++)
-        if(input[x] == '\\')
-            for(let i = 1; i <= 3; i++) {
+        if(input[x] == '\\') {
 
-                let holdout = "";
+            let first = "";
+            let second = "";
+
+            for(let firstIndex = 1; firstIndex <= 3; firstIndex++) {
 
                 if(input[x] != ',')
-                    holdout+= input[x + i];
-                else break;
+                    first+= input[x + firstIndex];
+                else {
+
+                    for(let secondIndex = 1; secondIndex <= 3; secondIndex++) {
+
+                        if(input[x] != '\\' || input[x] != '\\')
+                            second+= input[x + firstIndex];
+
+                    }
+
+                }
 
             }
+
+            output+= String.fromCharCode(first) + String.fromCharCode(second);
+
+        }
 
     document.getElementById("output").value = output;
 
