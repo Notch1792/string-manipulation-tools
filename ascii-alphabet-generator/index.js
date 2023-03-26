@@ -40,7 +40,9 @@ function generate() {
             for(let i = first; i <= second; i++)
                 output+= String.fromCharCode(i);
 
-        }
+        } else if(input[x] == '/')
+            for(let i = charCodeAt(x + 1); i <= charCodeAt(x + 3); i++)
+              output+= String.fromCharCode(i);
 
     console.log(output);
 
