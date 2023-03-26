@@ -28,5 +28,8 @@ h1 {
     background: red;
 }
 .link.ascii-alphabet-gen {
+    background: red;
+}
+.link.char-counter {
     background: lime;
 }
