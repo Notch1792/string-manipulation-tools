@@ -13,10 +13,22 @@ function generate() {
 
                 if(input[x + firstIndex] != ',') {
 
-                    console.log(parseInt(input[x + firstIndex]));
-
                     first*= 10;
                     first+= parseInt(input[x + firstIndex]);
+
+                } else {
+
+                    for(let secondIndex = 1; secondIndex <= 3; secondIndex++) {
+
+                        if(input[x + firstIndex + secondIndex] != '\\' && input[x + firstIndex + secondIndex] != '/' && input[x + firstIndex + secondIndex] != undefined) {
+        
+                            second*= 10;
+                            second+= parseInt(input[x + secondIndex + firstIndex]);
+
+                        } else break;
+
+                    }
+
                 }
 
             }
