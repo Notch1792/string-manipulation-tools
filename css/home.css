@@ -1,0 +1,32 @@
+
+
+.preview {
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+}
+body {
+    background-image: url("../assets/img/random-string-generator.jpg");
+    background-size: 100%;
+}
+
+.preview__description {
+    position: absolute;
+    top: 30vh;
+    left: calc(50vw - 250px);
+    width: 500px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px var(--color-main);
+    color: white !important;
+}
+
+.preview__projects-button.button {
+    position: absolute;
+    top: 30vh;
+    left: calc(50vw + 250px);
+    color: white;
+    border-color: var(--color-main);
+}

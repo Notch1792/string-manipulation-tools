@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Counter | Text Tools</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+    <script>
+      function generate() {
+        document.getElementById("output").value = String(
+          document.getElementById("input").value
+        ).length;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <h1 class="title text">Character Counter</h1>
+    <div class="main">
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="Input"
+          id="input"
+        ></textarea>
+        <button class="main__ main__generate button" onclick="generate()">
+          COUNT
+        </button>
+      </div>
+
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

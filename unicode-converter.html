@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unicode Converter | Text Tools</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/ascii-converter.css" />
+    <script src="javascript/unicode-converter.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <h1 class="title text">Unicode Converter</h1>
+    <div class="main">
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="Input"
+          id="input"
+        ></textarea>
+        <textarea
+          class="main__input__output-seperator main__input__ textarea"
+          placeholder="Output Seperator"
+          id="output-seperator"
+        ></textarea>
+        <textarea
+          class="main__input__input-seperator main__input__ textarea"
+          placeholder="Input Seperator"
+          id="input-seperator"
+        ></textarea>
+      </div>
+
+      <button
+        class="main__ main__generate main__from button"
+        onclick="generateFrom()"
+      >
+        CONVERT FROM UNICODE IDs
+      </button>
+      <button
+        class="main__ main__generate main__to button"
+        onclick="generateTo()"
+      >
+        CONVERT TO UNICODE IDs
+      </button>
+
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

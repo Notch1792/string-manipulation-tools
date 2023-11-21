@@ -1,0 +1,152 @@
+:root {
+    --color-raised-bg: #26292f;
+    --color-bg: #16181c;
+    --dark-color-text: #b0bac5;
+    --dark-color-text-dark: #ecf9fb;
+    --color-button-bg: #434956;
+    --color-text-inactive: #929aa3;
+    --color-main: #00ff55;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+}
+
+.text-secondary {
+    color: #b0bac5;
+}
+.text {
+    color: #ecf9fb;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-main);
+    outline-width: 0;
+    border-radius: 10px;
+    border-color: var(--color-main);
+    color: var(--dark-color-text-dark);
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.textarea {
+    position: relative;
+    background-color: var(--color-button-bg);
+    color: var(--dark-color-text-dark);
+    border-radius: 20px;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+::placeholder {
+    color: var(--color-text-inactive);
+    font-size: 20px;
+}
+
+* {
+    font-weight: bold;
+    font-family: Copperplate, Helvetica, sans-serif;
+}
+
+.div {
+    position: relative;
+}
+
+.main {
+    position: relative;
+    top: 120px;
+    --width: 80vw;
+    width: var(--width);
+    left: calc(50vw - var(--width)/2);
+    text-align: center;
+    background-color: var(--color-raised-bg);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.main__input__input {
+    width: calc(var(--width) - 30px);
+    height: 200px;
+}
+.main__generate {
+    width: calc(var(--width) - 30vw);
+    margin: 20px;
+}
+.main__output {
+    width: calc(var(--width) - 30px);
+    height: 1000px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+    color: white;
+} 
+tr:nth-child(even) {
+    background-color: rgb(100, 100, 100);
+}
+
+.title {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sidelist {
+    position: absolute;
+    width: 25vw;
+    background-color: var(--color-raised-bg);
+    border-radius: 10px;
+    top: 140px;
+    left: 20px;
+    overflow: auto;
+    text-wrap: nowrap;
+    padding: 10px;
+    height: 500px;
+    margin-top: 30px;
+}
+.checklist {
+    position: relative;
+}
+.checkbox {
+    accent-color: var(--color-main);
+}
+
+.sidepanel {
+    position: absolute;
+    width: 25vw;
+    background-color: var(--color-raised-bg);
+    border-radius: 10px;
+    top: 700px;
+    left: 20px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.tinygenerate {
+    width: 20vw;
+    margin: 20px;
+}
+.tinyinput {
+    width: 23vw;
+}
+.tinyoutput {
+    width: 23vw;
+    height: 100px;
+}

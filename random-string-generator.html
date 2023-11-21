@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random String Generator | Text Tools</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/random-string-generator.css" />
+    <script src="javascript/random-string-generator.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <h1 class="title text">Random String Generator</h1>
+    <div class="main">
+      <div class="main__presets main__">
+        <p class="text main__presets__text text main__presets__">Presets:</p>
+        <div class="main__presets__presets">
+          <button
+            class="button main__presets__clear main__presets__"
+            onClick="reset()"
+          >
+            CLEAR
+          </button>
+          <button
+            class="button main__presets__minus main__presets__"
+            onClick="ascii()"
+          >
+            ASCII Alphabet+
+          </button>
+          <button
+            class="button main__presets__plus main__presets__"
+            onClick="asciiLimited()"
+          >
+            ASCII Alphabet-
+          </button>
+          <button
+            class="button main__presets__numbers main__presets__"
+            onClick="numbers()"
+          >
+            Numbers
+          </button>
+          <button
+            class="button main__presets__lowercase main__presets__"
+            onClick="lowercase()"
+          >
+            Lowercase Letters
+          </button>
+          <button
+            class="button main__presets__uppercase main__presets__"
+            onClick="uppercase()"
+          >
+            Uppercase Letters
+          </button>
+          <button
+            class="button main__presets__symbols main__presets__"
+            onClick="symbols()"
+          >
+            Special Characters
+          </button>
+        </div>
+      </div>
+
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="Input Strings"
+          id="input"
+        ></textarea>
+        <textarea
+          class="main__input__seperator main__input__ textarea"
+          placeholder="Input Seperator"
+          id="seperator"
+        ></textarea>
+        <textarea
+          class="main__input__min main__input__ textarea"
+          placeholder="Min Elements"
+          id="min"
+        ></textarea>
+        <textarea
+          class="main__input__max main__input__ textarea"
+          placeholder="Max Elements"
+          id="max"
+        ></textarea>
+        <textarea
+          class="main__input__output-seperator main__input__ textarea"
+          placeholder="Output Seperator"
+          id="output-seperator"
+        ></textarea>
+      </div>
+      <button class="main__ main__generate button" onclick="generate()">
+        GENERATE
+      </button>
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

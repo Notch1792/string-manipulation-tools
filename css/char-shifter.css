@@ -1,0 +1,16 @@
+.main {
+    --width: 60vw !important;
+    left: calc(60vw - var(--width)/2) !important;
+}
+
+#search {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 25vw !important;
+    height: 30px;
+    z-index: 998 !important;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

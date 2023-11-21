@@ -1,0 +1,21 @@
+.main__projects__ {
+    width: 500px;
+    height: 200px;
+    background-color: var(--color-button-bg);
+    margin: 10px;
+    padding: 10px;
+    float: left;
+
+    border-radius: 10px;
+}
+.main__projects {
+    padding: 10px;
+}
+.main {
+    height: 10000px;
+}
+#search {
+    position: relative;
+    width: 400px;
+    right: 50px;
+}

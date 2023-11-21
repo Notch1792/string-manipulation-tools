@@ -1,0 +1,49 @@
+.main__presets {
+    height: 70px;
+}
+.main__presets__ {
+    float: left;
+    margin: 5px;
+}
+.main__presets__text {
+    left: 20px;
+    top: 0;
+}
+
+.main__presets__clear {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    height: 25px !important;
+    width: 65px !important;
+    background-color: red !important;
+    border-color: red !important;
+}
+.main__presets__clear:hover {
+    background-color: darkred !important;
+}
+
+.main__presets__minus {
+    left: 100px;
+    top: 20px;
+}
+.main__presets__plus {
+    left: 210px;
+    top: 20px;
+}
+.main__presets__symbols {
+    left: 320px;
+    top: 20px;
+}
+.main__presets__numbers {
+    left: 430px;
+    top: 20px;
+}
+.main__presets__lowercase {
+    left: 540px;
+    top: 20px;
+}
+.main__presets__uppercase {
+    left: 650px;
+    top: 20px;
+}

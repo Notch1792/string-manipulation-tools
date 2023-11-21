@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>template</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/template.css" />
+    <script src="javascript/template.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <h1 class="title text">template</h1>
+    <div class="main">
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="input"
+          id="input"
+        ></textarea>
+      </div>
+
+      <textarea
+        class="main__input__template main__input__ textarea"
+        placeholder="template"
+        id="template"
+      ></textarea>
+
+      <button class="main__ main__generate button" onclick="generate()">
+        GENERATE
+      </button>
+
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

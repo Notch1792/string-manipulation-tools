@@ -1,0 +1,6 @@
+.main__to {
+    width: calc((var(--width) - 30vw)/2) !important;
+}
+.main__from {
+    width: calc((var(--width) - 30vw)/2) !important;
+}
