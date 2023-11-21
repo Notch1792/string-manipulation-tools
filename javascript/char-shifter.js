@@ -12,7 +12,7 @@ function search() {
         var osetStr = oset(input, i, false);
         for(var i2 = 0; i2 < searchQuery.length; i2++) {
 
-            if(osetStr.includes(searchQuery[i2])) {
+            if(osetStr.toLocaleLowerCase().includes(searchQuery[i2].toLowerCase())) {
 
                 output += i + " | " + osetStr + '\n';
             }
