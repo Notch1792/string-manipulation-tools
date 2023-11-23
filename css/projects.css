@@ -13,6 +13,7 @@
 }
 .main {
     height: 10000px;
+    width: 81vw !important;
 }
 #search {
     position: relative;

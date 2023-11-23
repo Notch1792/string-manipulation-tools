@@ -19,19 +19,19 @@
           placeholder="Input"
           id="input"
         ></textarea>
-      </div>
 
-      <textarea
-        class="main__input__offset main__input__ textarea"
-        placeholder="Offset"
-        id="offset"
-      ></textarea>
+        <textarea
+          class="main__input__offset main__input__ textarea"
+          placeholder="Offset"
+          id="offset"
+        ></textarea>
 
-      <div class="checklist">
-        <label class="text">
-          <input type="checkbox" id="rm-spaces" class="checkbox" />
-          Remove Spaces
-        </label>
+        <div class="checklist">
+          <label class="text">
+            <input type="checkbox" id="rm-spaces" class="checkbox" />
+            Remove Spaces
+          </label>
+        </div>
       </div>
 
       <button class="main__ main__generate button" onclick="generate()">
@@ -63,16 +63,18 @@
         class="textarea tinyinput"
         placeholder="Input Seperator"
       ></textarea>
-      <textarea
-        id="min"
-        class="textarea tinyinput"
-        placeholder="Min search"
-      ></textarea>
-      <textarea
-        id="max"
-        class="textarea tinyinput"
-        placeholder="Max Search"
-      ></textarea>
+      <textarea id="min" class="textarea tinyinput" placeholder="Min search">
+-127</textarea
+      >
+      <textarea id="max" class="textarea tinyinput" placeholder="Max Search">
+127</textarea
+      >
+      <div class="checklist">
+        <label class="text">
+          <input type="checkbox" id="lowercase" class="checkbox" checked />
+          toLowerCase()
+        </label>
+      </div>
       <button class="button tinygenerate" onclick="search()">SEARCH</button>
       <textarea
         id="result"

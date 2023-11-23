@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ascii Generator | Text Tools</title>
+    <title>String Replacer | Text Tools</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="javascript/ascii-generator.js"></script>
+    <script src="javascript/string-replacer.js"></script>
     <script src="javascript/jquery.js"></script>
     <script src="javascript/handlebars.js"></script>
   </head>
   <body>
     <div id="header"></div>
-    <h1 class="text title">Ascii Range Generator</h1>
+
+    <h1 class="title text">String Replacer</h1>
     <div class="main">
       <div class="main__input main__">
         <textarea
           class="main__input__input main__input__ textarea"
-          placeholder="Input
-          For characters use '/'
-          For numerical values use '\'
-          
-          Example:
-          /A-Z\97-122
-          
-          Output: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz""
+          placeholder="Input"
           id="input"
         ></textarea>
+
         <textarea
-          class="main__input__charSeperator main__input__ textarea"
-          placeholder="Output Character Seperator"
-          id="charSeperator"
+          class="main__input__replace-with main__input__ textarea"
+          placeholder="Replace String With"
+          id="replace-with"
         ></textarea>
         <textarea
-          class="main__input__stringSeperator main__input__ textarea"
-          placeholder="Output String Seperator"
-          id="stringSeperator"
+          class="main__input__replace-this main__input__ textarea"
+          placeholder="String to Replace"
+          id="replace-this"
         ></textarea>
       </div>
 
       <button class="main__ main__generate button" onclick="generate()">
-        GENERATE
+        REPLACE
       </button>
 
       <textarea

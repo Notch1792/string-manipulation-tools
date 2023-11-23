@@ -1,25 +1,44 @@
 function search() {
+
+    console.log("Fetching input...");
+
     var seperator = document.getElementById("seperator").value;
-    var searchQuery = document.getElementById("keywords").value.split(seperator);
+    var searchQuery = document.getElementById("keywords").value;
     var min = parseInt(document.getElementById("min").value);
     var max = parseInt(document.getElementById("max").value);
     var input = document.getElementById("input").value;
     var output = "";
+    var matches = 0;
+    var lowercase = document.getElementById("lowercase").checked;
     let result = document.getElementById("result");
+
+    console.log("Fetched input!");
+    console.log("Lowercase: " + lowercase);
+
+
+    if(lowercase) searchQuery = searchQuery.toLowerCase();
+    searchQuery = searchQuery.split(seperator);
+
+    console.log("Started main loop!");
 
     for(var i = min; i <= max; i++) {
 
         var osetStr = oset(input, i, false);
+        if(lowercase) osetStr = osetStr.toLowerCase();
         for(var i2 = 0; i2 < searchQuery.length; i2++) {
 
-            if(osetStr.toLocaleLowerCase().includes(searchQuery[i2].toLowerCase())) {
+            if(osetStr.includes(searchQuery[i2])) {
 
-                output += i + " | " + osetStr + '\n';
+                output += i + " | " + oset(input, i, false) + '\n';
+                console.log("Match found, Adding to results!");
+                matches++;
             }
         }
     }
 
+    console.log("Main loop finished! Pushing results to HTML.");
     result.value = output;
+    console.log("Search finished, (" + matches + ") matches found!")
 
 }
 
