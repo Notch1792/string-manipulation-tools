@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Character Counter | Text Tools</title>
+    <title>String Mirror | Text Tools</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/string-mirror.js"></script>
     <script src="javascript/jquery.js"></script>
     <script src="javascript/handlebars.js"></script>
-    <script src="javascript/char-counter.js"></script>
   </head>
   <body>
     <div id="header"></div>
 
-    <h1 class="title text">Character Counter</h1>
+    <h1 class="title text">String Mirror</h1>
     <div class="main">
       <div class="main__input main__">
         <textarea
@@ -18,15 +18,22 @@
           placeholder="Input"
           id="input"
         ></textarea>
+
         <textarea
-          class="main__input__cchar main__input__ textarea"
-          placeholder="String to Count"
-          id="cchar"
+          class="main__input__seperator main__input__ textarea"
+          placeholder="Input Seperator"
+          id="seperator"
         ></textarea>
+        <div class="checklist">
+          <label class="text">
+            <input type="checkbox" id="rm-seperator" class="checkbox" checked />
+            Remove Seperator
+          </label>
+        </div>
       </div>
 
       <button class="main__ main__generate button" onclick="generate()">
-        COUNT
+        MIRROR
       </button>
 
       <textarea

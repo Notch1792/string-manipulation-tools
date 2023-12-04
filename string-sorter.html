@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>template</title>
+    <title>String Sorter | Text Tools</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/template.css" />
-    <script src="javascript/template.js"></script>
+    <script src="javascript/string-sorter.js"></script>
     <script src="javascript/jquery.js"></script>
     <script src="javascript/handlebars.js"></script>
   </head>
   <body>
     <div id="header"></div>
 
-    <h1 class="title text">template</h1>
+    <h1 class="title text">String Sorter</h1>
     <div class="main">
       <div class="main__input main__">
         <textarea
@@ -21,14 +20,28 @@
         ></textarea>
 
         <textarea
-          class="main__input__template main__input__ textarea"
-          placeholder="template"
-          id="template"
+          class="main__input__input-seperator main__input__ textarea"
+          placeholder="Input Seperator"
+          id="input-seperator"
         ></textarea>
+        <textarea
+          class="main__input__output-seperator main__input__ textarea"
+          placeholder="Output Seperator"
+          id="output-seperator"
+        ></textarea>
+        <div class="checklist">
+          <label class="text"
+            >Sort
+            <select class="select text" id="sort">
+              <option name="alphabet">Alphabetically</option>
+              <option name="number">Numerically</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <button class="main__ main__generate button" onclick="generate()">
-        GENERATE
+        SORT
       </button>
 
       <textarea
