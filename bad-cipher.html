@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bad Cipher | Don't Credit me</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/bad-cipher.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <h1 class="title text">Bad Encryption</h1>
+    <div class="main">
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="Input"
+          id="input"
+        ></textarea>
+
+        <textarea
+          class="main__input__key main__input__ textarea"
+          placeholder="Key"
+          id="key"
+        ></textarea>
+      </div>
+
+      <button
+        class="main__ main__generate main__generate-mini button"
+        onclick="encrypt()"
+      >
+        ENCRYPT
+      </button>
+      <button
+        class="main__ main__generate main__generate-mini button"
+        onclick="decrypt()"
+      >
+        DECRYPT
+      </button>
+
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

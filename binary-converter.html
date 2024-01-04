@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Converter | Text Tools</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="javascript/binary-converter.js"></script>
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/handlebars.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <h1 class="title text">Binary Converter</h1>
+    <div class="main">
+      <div class="main__input main__">
+        <textarea
+          class="main__input__input main__input__ textarea"
+          placeholder="Input"
+          id="input"
+        ></textarea>
+
+        <textarea
+          class="main__input__seperator-in main__input__ textarea"
+          placeholder="Input Seperator"
+          id="seperatorIn"
+        ></textarea>
+        <textarea
+          class="main__input__seperator-out main__input__ textarea"
+          placeholder="Output Seperator"
+          id="seperatorOut"
+        ></textarea>
+      </div>
+
+      <div class="toggle-slider">
+        <input type="checkbox" id="switch" class="checkbox" />
+
+        <label for="switch" class="toggle">
+          <p class="text">
+            INT&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;CHAR
+          </p>
+        </label>
+      </div>
+
+      <button
+        class="main__ main__generate main__generate-mini button"
+        onclick="generateTo()"
+      >
+        CONVERT TO
+      </button>
+      <button
+        class="main__ main__generate main__generate-mini button"
+        onclick="generateFrom()"
+      >
+        CONVERT FROM
+      </button>
+
+      <textarea
+        class="main__output main__ textarea"
+        placeholder="Output..."
+        id="output"
+      ></textarea>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
