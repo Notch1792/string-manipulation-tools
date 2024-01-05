@@ -10,12 +10,12 @@ function generateTo() {
         var seperatorIn = document.getElementById("seperatorIn").value;
         var content = input.split(seperatorIn);
         for(var i = 0; i < content.length; i++) {
-            output+= toBinary(content[i]);
+            output+= toBinary(content[i]).split("").reverse().join("");
             if(i + 1 < content.length) output+= seperatorOut;
         }
     } else if(mode == 1) {
         for(var i = 0; i < input.length; i++) {
-            output+= toBinary(toInt(input[i]));
+            output+= toBinary(toInt(input[i])).split("").reverse().join("");
             if(i + 1 < input.length) output+= seperatorOut;
         }
     }
@@ -34,12 +34,12 @@ function generateFrom() {
 
     if(mode == 0) {
         for(var i = 0; i < content.length; i++) {
-            output+= fromBinary(content[i]);
+            output+= fromBinary(content[i].split("").reverse().join(""));
             if(i + 1 < content.length) output+= seperatorOut;
         }
     } else if(mode == 1) {
         for(var i = 0; i < content.length; i++) {
-            output+= fromInt(fromBinary(content[i]));
+            output+= fromInt(fromBinary(content[i].split("").reverse().join("")));
             if(i + 1 < content.length) output+= seperatorOut;
         }
     }
