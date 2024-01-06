@@ -1,29 +1,4 @@
-function generateTo() {
-    let result = document.getElementById("output");
-    var input = document.getElementById("input").value;
-    var seperatorOut = document.getElementById("seperatorOut").value;
-    var mode = document.getElementById("switch").checked;
-    console.log(mode);
-    var output = "";
-
-    if(mode == 0) {
-        var seperatorIn = document.getElementById("seperatorIn").value;
-        var content = input.split(seperatorIn);
-        for(var i = 0; i < content.length; i++) {
-            output+= toBinary(content[i]).split("").reverse().join("");
-            if(i + 1 < content.length) output+= seperatorOut;
-        }
-    } else if(mode == 1) {
-        for(var i = 0; i < input.length; i++) {
-            output+= toBinary(toInt(input[i])).split("").reverse().join("");
-            if(i + 1 < input.length) output+= seperatorOut;
-        }
-    }
-
-    result.value = output;
-}
-
-function generateFrom() {
+function generate(type) {
     let result = document.getElementById("output");
     var input = document.getElementById("input").value;
     var seperatorOut = document.getElementById("seperatorOut").value;
@@ -32,16 +7,15 @@ function generateFrom() {
     var mode = document.getElementById("switch").checked;
     var output = "";
 
-    if(mode == 0) {
-        for(var i = 0; i < content.length; i++) {
-            output+= fromBinary(content[i].split("").reverse().join(""));
-            if(i + 1 < content.length) output+= seperatorOut;
+    for(var i = 0; i < content.length; i++) {
+        if(type == 0) {
+            if(mode == 0) output+= toBinary(content[i]);
+            else if(mode == 1) output+= toBinary(toInt(input[i]));
+        } else if(type == 1) {
+            if(mode == 0) output+= fromBinary(content[i]);
+            else if(mode == 1) output+= fromInt(fromBinary(content[i]));
         }
-    } else if(mode == 1) {
-        for(var i = 0; i < content.length; i++) {
-            output+= fromInt(fromBinary(content[i].split("").reverse().join("")));
-            if(i + 1 < content.length) output+= seperatorOut;
-        }
+        if(i + 1 < content.length) output+= seperatorOut;
     }
 
     result.value = output;
@@ -50,15 +24,14 @@ function generateFrom() {
 function toBinary(x) {
     var output = "";
     for(var n = 0; n < Math.log2(x) + 1; n++) {
-        output+= Math.floor(x/Math.pow(2, n)) - Math.floor(x/Math.pow(2, n + 1))*2;
+        output = (Math.floor(x/Math.pow(2, n)) - Math.floor(x/Math.pow(2, n + 1))*2) + output;
     }
     return output;
 }
 function fromBinary(x) {
     output = 0;
     for(var n = 0; n < x.length; n++) {
-        if(x[n] == 1)
-        output+= 2**n;
+        if(x[n] == 1) output+= 2**(x.length - n - 1);
     }
     return output;
 }
